@@ -1,173 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voyage du Monde - Découvrez les Plus Belles Villes</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voyage du Monde - Découvrez les Plus Belles Villes</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>🌍 Voyage du Monde</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Accueil</a></li>
-                    <li><a href="#destinations">Destinations</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="Retour à l'accueil">
+          <span class="brand-icon">🌍</span>
+          <span class="brand-text">
+            <span class="brand-name">Voyage du Monde</span>
+            <span class="brand-sub">Guides, histoires & itinéraires</span>
+          </span>
+        </a>
 
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#contact">Newsletter</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2>Découvrez les Destinations du Monde</h2>
-            <p>Explorez les villes les plus fascinantes des cinq continents</p>
-            <a href="#destinations" class="btn-primary">Commencer l'Aventure</a>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge">✨ Des villes sélectionnées • des guides utiles • une vibe soleil</div>
+        <h1>Découvre des destinations qui donnent envie de partir.</h1>
+        <p>
+          Des villes iconiques, de l’histoire qui passionne, et des idées concrètes pour organiser ton voyage.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#destinations" class="btn btn-primary">Explorer les destinations</a>
+          <a href="#contact" class="btn btn-ghost">Recevoir des bons plans</a>
         </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">5</div>
+            <div class="stat-label">continents</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">villes</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">gratuit</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="destinations" class="destinations">
-        <div class="container">
-            <h2 class="section-title">Nos Destinations</h2>
-            <p class="section-subtitle">Choisissez votre prochaine destination parmi nos villes sélectionnées</p>
-            
-            <div class="continent-section">
-                <h3 class="continent-title">🌎 Amérique Latine</h3>
-                <div class="cities-grid">
-                    <a href="cartagena.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Carthagène</h4>
-                            <p>Colombie</p>
-                            <span class="city-tag">Colonial • Plages</span>
-                        </div>
-                    </a>
-                    <a href="cusco.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Cusco</h4>
-                            <p>Pérou</p>
-                            <span class="city-tag">Inca • Montagne</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="continent-section">
-                <h3 class="continent-title">🌍 Europe</h3>
-                <div class="cities-grid">
-                    <a href="prague.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Prague</h4>
-                            <p>République Tchèque</p>
-                            <span class="city-tag">Architecture • Culture</span>
-                        </div>
-                    </a>
-                    <a href="lisbon.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Lisbonne</h4>
-                            <p>Portugal</p>
-                            <span class="city-tag">Océan • Histoire</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="continent-section">
-                <h3 class="continent-title">🌏 Asie</h3>
-                <div class="cities-grid">
-                    <a href="kyoto.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Kyoto</h4>
-                            <p>Japon</p>
-                            <span class="city-tag">Temples • Traditions</span>
-                        </div>
-                    </a>
-                    <a href="bangkok.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Bangkok</h4>
-                            <p>Thaïlande</p>
-                            <span class="city-tag">Street Food • Temples</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="continent-section">
-                <h3 class="continent-title">🌍 Afrique</h3>
-                <div class="cities-grid">
-                    <a href="marrakech.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Marrakech</h4>
-                            <p>Maroc</p>
-                            <span class="city-tag">Souks • Désert</span>
-                        </div>
-                    </a>
-                    <a href="cape-town.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800')"></div>
-                        <div class="city-info">
-                            <h4>Le Cap</h4>
-                            <p>Afrique du Sud</p>
-                            <span class="city-tag">Nature • Océan</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="continent-section">
-                <h3 class="continent-title">🌎 Amérique du Nord</h3>
-                <div class="cities-grid">
-                    <a href="quebec.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop')"></div>
-                        <div class="city-info">
-                            <h4>Québec</h4>
-                            <p>Canada</p>
-                            <span class="city-tag">Francophone • Hiver</span>
-                        </div>
-                    </a>
-                    <a href="san-francisco.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800')"></div>
-                        <div class="city-info">
-                            <h4>San Francisco</h4>
-                            <p>États-Unis</p>
-                            <span class="city-tag">Tech • Ponts</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Nos Destinations</h2>
+          <p class="section-subtitle">
+            Choisis ta prochaine aventure — chaque ville a son histoire, ses incontournables et ses conseils.
+          </p>
         </div>
+
+        <div class="continent-section">
+          <h3 class="continent-title">🌎 Amérique Latine</h3>
+          <div class="cities-grid">
+            <a href="cartagena.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=800')"></div>
+              <div class="city-info">
+                <h4>Carthagène</h4>
+                <p>Colombie</p>
+                <span class="city-tag">Colonial • Plages</span>
+              </div>
+            </a>
+
+            <a href="cusco.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800')"></div>
+              <div class="city-info">
+                <h4>Cusco</h4>
+                <p>Pérou</p>
+                <span class="city-tag">Inca • Montagne</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="continent-section">
+          <h3 class="continent-title">🌍 Europe</h3>
+          <div class="cities-grid">
+            <a href="prague.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=800')"></div>
+              <div class="city-info">
+                <h4>Prague</h4>
+                <p>République Tchèque</p>
+                <span class="city-tag">Architecture • Culture</span>
+              </div>
+            </a>
+
+            <a href="lisbon.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800')"></div>
+              <div class="city-info">
+                <h4>Lisbonne</h4>
+                <p>Portugal</p>
+                <span class="city-tag">Océan • Histoire</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="continent-section">
+          <h3 class="continent-title">🌏 Asie</h3>
+          <div class="cities-grid">
+            <a href="kyoto.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800')"></div>
+              <div class="city-info">
+                <h4>Kyoto</h4>
+                <p>Japon</p>
+                <span class="city-tag">Temples • Traditions</span>
+              </div>
+            </a>
+
+            <a href="bangkok.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800')"></div>
+              <div class="city-info">
+                <h4>Bangkok</h4>
+                <p>Thaïlande</p>
+                <span class="city-tag">Street Food • Temples</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="continent-section">
+          <h3 class="continent-title">🌍 Afrique</h3>
+          <div class="cities-grid">
+            <a href="marrakech.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800')"></div>
+              <div class="city-info">
+                <h4>Marrakech</h4>
+                <p>Maroc</p>
+                <span class="city-tag">Souks • Désert</span>
+              </div>
+            </a>
+
+            <a href="cape-town.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800')"></div>
+              <div class="city-info">
+                <h4>Le Cap</h4>
+                <p>Afrique du Sud</p>
+                <span class="city-tag">Nature • Océan</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="continent-section">
+          <h3 class="continent-title">🌎 Amérique du Nord</h3>
+          <div class="cities-grid">
+            <a href="quebec.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop')"></div>
+              <div class="city-info">
+                <h4>Québec</h4>
+                <p>Canada</p>
+                <span class="city-tag">Francophone • Hiver</span>
+              </div>
+            </a>
+
+            <a href="san-francisco.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800')"></div>
+              <div class="city-info">
+                <h4>San Francisco</h4>
+                <p>États-Unis</p>
+                <span class="city-tag">Tech • Ponts</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section id="contact" class="contact">
-    <div class="container">
-        <h2>Recevez nos meilleurs conseils voyage ✈️</h2>
-        <p>Inscrivez-vous à la newsletter pour découvrir de nouvelles destinations et bons plans.</p>
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-text">
+            <h2>Newsletter Voyage ✈️</h2>
+            <p>
+              Reçois des itinéraires, bons plans et idées de destinations (1 email par semaine, pas de spam).
+            </p>
+            <ul class="contact-bullets">
+              <li>✅ Itinéraires “prêts à copier”</li>
+              <li>✅ Spots incontournables + pépites</li>
+              <li>✅ Conseils budget & saisons</li>
+            </ul>
+          </div>
 
-        <form class="newsletter-form">
-            <input type="email" placeholder="Votre adresse email" required>
-            <button type="submit">S'inscrire</button>
-        </form>
-    </div>
-</section>
-
-    <footer>
-        <div class="container">
-           <p>&copy; <span id="year"></span> Voyage du Monde - Tous droits réservés</p>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+          <form class="newsletter-form">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" type="email" placeholder="Ton email" required />
+            <button type="submit" class="btn btn-primary">S’inscrire</button>
+            <p class="fine-print">En t’inscrivant, tu acceptes de recevoir nos emails. Désinscription en 1 clic.</p>
+          </form>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Voyage du Monde — Tous droits réservés</p>
+      <p class="footer-mini">Made with ☀️ & orange vibes</p>
+    </div>
+  </footer>
+
+  <script>
+    // Année auto
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu mobile (simple)
+    const btn = document.querySelector(".nav-toggle");
+    const links = document.getElementById("navLinks");
+    btn?.addEventListener("click", () => {
+      const isOpen = links.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(isOpen));
+    });
+  </script>
 </body>
 </html>
