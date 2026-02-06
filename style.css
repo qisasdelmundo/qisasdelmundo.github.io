@@ -336,3 +336,228 @@ a{color:inherit;text-decoration:none}
   }
   .nav-links.open{display:flex}
 }
+
+/* =========================================================
+   CITY PAGES (même design que l’accueil) + thèmes par ville
+   Utilisation : <body class="theme-cartagena">, etc.
+   ========================================================= */
+
+/* Valeurs par défaut (si aucune classe theme-...) */
+body{
+  --city-accent: var(--o);
+  --city-accent-2: var(--o2);
+  --city-soft: rgba(255,106,0,0.10);
+}
+
+/* Header des pages ville */
+.city-header{
+  position: relative;
+  min-height: 340px;
+  border-bottom: 1px solid var(--border);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 0 0 calc(var(--radius) + 12px) calc(var(--radius) + 12px);
+}
+
+/* Voile + teinte “culture” (pilotée par variables) */
+.city-header::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(800px 420px at 80% 20%, var(--city-soft), transparent 60%),
+    linear-gradient(90deg,
+      rgba(255,246,237,0.92) 0%,
+      rgba(255,246,237,0.70) 45%,
+      rgba(255,246,237,0.18) 100%);
+}
+
+/* Contenu dans le hero */
+.city-header-content{
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  padding: 78px 0 34px;
+}
+
+.city-header-content h1{
+  margin:0;
+  font-size: clamp(34px, 4.2vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -0.9px;
+}
+
+.city-header-content .country{
+  margin: 10px 0 14px;
+  color: rgba(28,28,28,0.70);
+  font-weight: 900;
+}
+
+/* Pastilles culture (optionnel mais très efficace) */
+.city-badges{display:flex;gap:10px;flex-wrap:wrap}
+.city-pill{
+  display:inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 1000;
+  color:#1b1b1b;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(0,0,0,0.10);
+}
+.city-pill.primary{
+  background: linear-gradient(135deg, var(--city-soft), rgba(255,255,255,0.85));
+  border-color: rgba(0,0,0,0.08);
+}
+
+/* Layout pages ville */
+.city-content{padding: 22px 0 56px}
+.back-link{
+  display:inline-flex;
+  margin: 12px 0 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.70);
+  border: 1px solid var(--border);
+  font-weight: 1000;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.back-link:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.92);
+  border-color: rgba(0,0,0,0.12);
+}
+
+/* Sections (même esprit que les cards) */
+.city-section{
+  margin-top: 16px;
+  padding: 18px 18px;
+  border-radius: calc(var(--radius) + 8px);
+  background: rgba(255,255,255,0.84);
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 28px rgba(18,18,18,0.06);
+  position: relative;
+  overflow:hidden;
+}
+
+/* Petit motif discret dans chaque section (piloté par thème) */
+.city-section::after{
+  content:"";
+  position:absolute;
+  inset:auto -50px -70px auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 30% 30%, var(--city-soft), transparent 62%),
+    radial-gradient(circle at 65% 60%, rgba(255,255,255,0.0), transparent 60%);
+  transform: rotate(10deg);
+  pointer-events:none;
+}
+
+/* Titres des sections */
+.city-section h2{
+  margin: 0 0 10px;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  position: relative;
+  padding-left: 12px;
+}
+.city-section h2::before{
+  content:"";
+  position:absolute;
+  left:0; top: 4px;
+  width: 4px; height: 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--city-accent), var(--city-accent-2));
+}
+
+.city-section h3{
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  letter-spacing: -0.1px;
+}
+
+/* Best time un peu spécial */
+.city-section.best-time{
+  background:
+    radial-gradient(520px 220px at 10% 20%, var(--city-soft), transparent 60%),
+    rgba(255,255,255,0.86);
+  border-color: rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   THEMES (tu changes juste le body class dans chaque page)
+   ========================================================= */
+
+/* 🇨🇴 Carthagène : Caraïbes / couleurs / mer */
+body.theme-cartagena{
+  --city-accent: #00b8d9;               /* turquoise mer */
+  --city-accent-2: #ff6a00;             /* orange soleil */
+  --city-soft: rgba(0,184,217,0.16);
+}
+
+/* 🇵🇪 Cusco : Andes / terre / or inca */
+body.theme-cusco{
+  --city-accent: #c66a2b;               /* terre cuite */
+  --city-accent-2: #f0b429;             /* or */
+  --city-soft: rgba(198,106,43,0.14);
+}
+
+/* 🇯🇵 Kyoto : Japon / rouge torii / blanc épuré */
+body.theme-kyoto{
+  --city-accent: #e11d48;               /* rouge (torii) */
+  --city-accent-2: #ff6a00;             /* accent orange du site */
+  --city-soft: rgba(225,29,72,0.12);
+}
+
+/* 🇲🇦 Marrakech : ocre / zellige / bleu majorelle */
+body.theme-marrakech{
+  --city-accent: #d97706;               /* ocre */
+  --city-accent-2: #2563eb;             /* bleu majorelle */
+  --city-soft: rgba(217,119,6,0.14);
+}
+
+/* 🇨🇿 Prague : bordeaux / doré / vibe ancienne */
+body.theme-prague{
+  --city-accent: #7f1d1d;               /* bordeaux */
+  --city-accent-2: #f59e0b;             /* doré */
+  --city-soft: rgba(127,29,29,0.12);
+}
+
+/* 🇵🇹 Lisbonne : azulejos / bleu / soleil */
+body.theme-lisbon{
+  --city-accent: #2563eb;               /* bleu azulejos */
+  --city-accent-2: #ff6a00;             /* orange soleil */
+  --city-soft: rgba(37,99,235,0.12);
+}
+
+/* 🇹🇭 Bangkok : or / nuit / néons soft */
+body.theme-bangkok{
+  --city-accent: #f59e0b;               /* or */
+  --city-accent-2: #a855f7;             /* violet néon */
+  --city-soft: rgba(245,158,11,0.12);
+}
+
+/* 🇺🇸 San Francisco : bleu tech / brume / orange bridge */
+body.theme-sanfrancisco{
+  --city-accent: #0ea5e9;               /* bleu */
+  --city-accent-2: #ff6a00;             /* orange pont */
+  --city-soft: rgba(14,165,233,0.12);
+}
+
+/* 🇨🇦 Québec : hiver / bleu froid / blanc */
+body.theme-quebec{
+  --city-accent: #1d4ed8;               /* bleu froid */
+  --city-accent-2: #60a5fa;             /* bleu clair */
+  --city-soft: rgba(29,78,216,0.10);
+}
+
+/* 🇿🇦 Le Cap : océan / nature / vert */
+body.theme-capetown{
+  --city-accent: #0ea5e9;               /* océan */
+  --city-accent-2: #22c55e;             /* nature */
+  --city-soft: rgba(34,197,94,0.12);
+}
