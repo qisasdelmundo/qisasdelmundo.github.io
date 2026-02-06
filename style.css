@@ -574,3 +574,12 @@ body.theme-capetown{
 .city-quebec{
   background-image: url('https://images.unsplash.com/photo-1608019342976-e58b6e7b0b3e?w=1600&auto=format&fit=crop');
 }
+/* Spécifique Québec : voile moins opaque pour voir la photo */
+body.theme-quebec .city-header::before{
+  background:
+    radial-gradient(800px 420px at 80% 20%, rgba(29,78,216,0.18), transparent 60%),
+    linear-gradient(90deg,
+      rgba(255,246,237,0.65) 0%,
+      rgba(255,246,237,0.35) 45%,
+      rgba(255,246,237,0.08) 100%);
+}
