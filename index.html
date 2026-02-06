@@ -128,7 +128,7 @@
                 <h3 class="continent-title">🌎 Amérique du Nord</h3>
                 <div class="cities-grid">
                     <a href="quebec.html" class="city-card">
-                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=800')"></div>
+                        <div class="city-image" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop')"></div>
                         <div class="city-info">
                             <h4>Québec</h4>
                             <p>Canada</p>
@@ -149,16 +149,24 @@
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Besoin de Conseils ?</h2>
-            <p>Contactez-nous pour planifier votre prochain voyage</p>
-            <a href="mailto:contact@voyagedumonde.com" class="btn-secondary">Nous Contacter</a>
-        </div>
-    </section>
+    <div class="container">
+        <h2>Recevez nos meilleurs conseils voyage ✈️</h2>
+        <p>Inscrivez-vous à la newsletter pour découvrir de nouvelles destinations et bons plans.</p>
+
+        <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse email" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+</section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Voyage du Monde - Tous droits réservés</p>
+           <p>&copy; <span id="year"></span> Voyage du Monde - Tous droits réservés</p>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
         </div>
     </footer>
 </body>
