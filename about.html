@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>À propos — Qisas Del Mundo</title>
+  <meta name="description" content="Qisas Del Mundo : voyager comme on lit une histoire. Découvre le projet et notre manière de raconter les villes." />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER (identique à index) -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="container nav-inner">
+
+        <a class="brand" href="index.html" aria-label="Retour à l'accueil">
+          <span class="brand-icon">
+            <img src="logo-qisas.png" alt="Logo Qisas Del Mundo" class="brand-logo">
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Qisas Del Mundo</span>
+            <span class="brand-sub">À chaque destination, une histoire à vivre</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#destinations">Destinations</a></li>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="about.html" class="active">À propos</a></li>
+          <li><a href="index.html#contact">Newsletter</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+  <main class="city-content">
+    <div class="container">
+
+      <div class="city-section">
+        <h2>Pourquoi Qisas Del Mundo ?</h2>
+        <p>
+          “Qisas” veut dire <strong>histoires</strong>. L’idée est simple : voyager, ce n’est pas juste voir des endroits,
+          c’est comprendre ce qu’ils racontent.
+        </p>
+        <p>
+          Sur ce site, chaque ville est présentée comme un récit : <strong>son origine</strong>, ce qui l’a transformée,
+          les quartiers qui ont une âme, et des conseils concrets pour te repérer facilement.
+        </p>
+      </div>
+
+      <div class="city-section">
+        <h2>Ce que tu trouveras ici</h2>
+        <ul style="margin:0; padding-left:18px;">
+          <li><strong>Une histoire courte et claire</strong> pour comprendre l’essentiel</li>
+          <li><strong>Les lieux incontournables</strong> (et pourquoi ils comptent)</li>
+          <li><strong>Des conseils pratiques</strong> : saisons, transports, durée idéale</li>
+          <li><strong>Une lecture simple</strong> : pas de blabla, juste ce qui sert</li>
+        </ul>
+      </div>
+
+      <div class="city-section">
+        <h2>Notre promesse</h2>
+        <p>
+          Pas un blog, pas un journal. Juste un site utile et agréable :
+          <strong>un endroit où tu viens choisir une ville, apprendre, puis partir mieux préparé(e).</strong>
+        </p>
+      </div>
+
+      <div class="city-section best-time">
+        <h2>Tu veux suivre les prochaines villes ?</h2>
+        <p>
+          On ajoute de nouvelles destinations régulièrement.  
+          La newsletter sert uniquement à t’envoyer des idées et des guides (pas de spam).
+        </p>
+        <a href="index.html#contact" class="btn btn-primary" style="margin-top:8px;">
+          S’inscrire à la newsletter
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Qisas Del Mundo</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const btn = document.querySelector(".nav-toggle");
+    const links = document.getElementById("navLinks");
+
+    btn?.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
+    });
+  </script>
+
+</body>
+</html>
