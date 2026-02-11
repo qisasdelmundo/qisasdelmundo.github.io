@@ -575,3 +575,9 @@ body.theme-capetown{
   --city-accent-2: #22c55e;
   --city-soft: rgba(34,197,94,0.12);
 }
+
+.filter-chip.active{
+  background: rgba(255,106,0,0.16);
+  border: 1px solid rgba(255,106,0,0.25);
+  font-weight: 1000;
+}
