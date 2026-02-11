@@ -27,7 +27,7 @@
           </span>
         </a>
 
-        <button class="nav-toggle" aria-label="Menu">
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
 
@@ -35,8 +35,7 @@
           <li><a href="about.html">À propos</a></li>
           <li><a href="#destinations">Destinations</a></li>
           <li><a href="#collections">Collections</a></li>
-          <li><a href="#contact">Réseau Sociaux/a></li>
-          
+          <li><a href="#contact">Réseaux sociaux</a></li>
         </ul>
 
       </div>
@@ -47,7 +46,7 @@
   <!-- ================= HERO ================= -->
   <main>
     <section class="hero">
-      <div class="hero-bg"></div>
+      <div class="hero-bg" aria-hidden="true"></div>
 
       <div class="container hero-content">
         <div class="hero-badge">Récits de villes • Histoire • Conseils de voyage</div>
@@ -61,7 +60,7 @@
 
         <div class="hero-actions">
           <a href="#destinations" class="btn btn-primary">Explorer les destinations</a>
-          <a href="#contact" class="btn btn-ghost">Recevoir des conseils</a>
+          <a href="#contact" class="btn btn-ghost">Suivre nos actus</a>
         </div>
 
         <div class="hero-stats">
@@ -71,7 +70,7 @@
           </div>
 
           <div class="stat">
-            <div class="stat-num">10+</div>
+            <div class="stat-num">11+</div>
             <div class="stat-label">villes</div>
           </div>
 
@@ -227,6 +226,16 @@
               </div>
             </a>
 
+            <!-- NOUVELLE VILLE : GUANAJUATO -->
+            <a href="guanajuato.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1596484552834-6a58f850e0b9?w=800&auto=format&fit=crop')"></div>
+              <div class="city-info">
+                <h4>Guanajuato</h4>
+                <p>Mexique</p>
+                <span class="city-tag">Colonial • UNESCO</span>
+              </div>
+            </a>
+
           </div>
         </div>
 
@@ -251,7 +260,7 @@
             <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200')"></div>
             <div class="city-info">
               <h4>Villes d’histoire</h4>
-              <p>Capitals et récits fondateurs</p>
+              <p>Capitales et récits fondateurs</p>
             </div>
           </a>
 
@@ -268,38 +277,41 @@
     </section>
 
 
-    <!-- RÉSEAUX SOCIAUX -->
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="contact-card">
+    <!-- ================= RÉSEAUX SOCIAUX ================= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-card">
 
-      <div class="contact-text">
-        <h2>Suivre l’aventure 🌍</h2>
-        <p>
-          Chaque nouvelle ville, chaque récit et chaque itinéraire
-          est annoncé sur nos réseaux.
-        </p>
+          <div class="contact-text">
+            <h2>Suivre l’aventure 🌍</h2>
+            <p>
+              Chaque nouvelle ville, chaque récit et chaque itinéraire
+              est annoncé sur nos réseaux.
+            </p>
 
-        <ul class="contact-bullets">
-          <li>📍 Nouvelles destinations</li>
-          <li>🧭 Itinéraires simples</li>
-          <li>📸 Photos & inspirations voyage</li>
-        </ul>
+            <ul class="contact-bullets">
+              <li>📍 Nouvelles destinations</li>
+              <li>🧭 Itinéraires simples</li>
+              <li>📸 Photos & inspirations voyage</li>
+            </ul>
+          </div>
+
+          <div class="social-links">
+            <a href="https://instagram.com/qisasdelmundo" target="_blank" rel="noopener" class="btn btn-primary">
+              Instagram
+            </a>
+
+            <a href="https://x.com/qisasdelmundo" target="_blank" rel="noopener" class="btn btn-ghost">
+              X
+            </a>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="social-links">
-        <a href="https://instagram.com/qisasdelmundo" target="_blank" class="btn btn-primary">
-          Instagram
-        </a>
+  </main>
 
-        <a href="https://x.com/qisasdelmundo" target="_blank" class="btn btn-ghost">
-          X 
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
@@ -318,7 +330,7 @@
 
     btn?.addEventListener("click", () => {
       const open = links.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open);
+      btn.setAttribute("aria-expanded", String(open));
     });
   </script>
 
