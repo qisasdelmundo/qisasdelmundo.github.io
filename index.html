@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qisas Del Mundo - À Chaque Destination, une Histoire à Vivre</title>
-  <meta name="description" content="Qisas Del Mundo : des destinations racontées comme des histoires, avec des conseils concrets pour organiser ton voyage." />
+
+  <title>Qisas Del Mundo — Voyager comme on lit une histoire</title>
+  <meta name="description" content="Découvre des villes du monde à travers leur histoire, leurs lieux incontournables et des conseils concrets pour organiser ton voyage." />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- ================= HEADER ================= -->
   <header class="site-header">
     <nav class="navbar">
       <div class="container nav-inner">
-        <a class="brand" href="index.html" aria-label="Retour à l'accueil">
+
+        <a class="brand" href="index.html">
           <span class="brand-icon">
             <img src="logo-qisas.png" alt="Logo Qisas Del Mundo" class="brand-logo">
           </span>
@@ -22,38 +27,39 @@
           </span>
         </a>
 
-        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <button class="nav-toggle" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
 
         <ul class="nav-links" id="navLinks">
-          <li><a href="index.html" class="active">Accueil</a></li>
           <li><a href="#destinations">Destinations</a></li>
           <li><a href="#collections">Collections</a></li>
           <li><a href="#contact">Newsletter</a></li>
         </ul>
+
       </div>
     </nav>
   </header>
 
+
+  <!-- ================= HERO ================= -->
   <main>
-    <!-- HERO -->
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-bg"></div>
 
       <div class="container hero-content">
-        <div class="hero-badge">✨ Récits de villes • Histoire & culture • Conseils concrets</div>
+        <div class="hero-badge">Récits de villes • Histoire • Conseils de voyage</div>
 
         <h1>Voyager comme on lit une histoire.</h1>
+
         <p>
-          Qisas Del Mundo te fait découvrir des villes iconiques à travers leur passé, leurs quartiers,
-          leurs incontournables et des itinéraires simples à suivre.
+          Explore des villes iconiques du monde à travers leur passé,
+          leurs quartiers, leurs lieux incontournables et des itinéraires simples à suivre.
         </p>
 
         <div class="hero-actions">
           <a href="#destinations" class="btn btn-primary">Explorer les destinations</a>
-          <a href="#contact" class="btn btn-ghost">Recevoir des bons plans</a>
+          <a href="#contact" class="btn btn-ghost">Recevoir des conseils</a>
         </div>
 
         <div class="hero-stats">
@@ -61,10 +67,12 @@
             <div class="stat-num">5</div>
             <div class="stat-label">continents</div>
           </div>
+
           <div class="stat">
             <div class="stat-num">10+</div>
             <div class="stat-label">villes</div>
           </div>
+
           <div class="stat">
             <div class="stat-num">100%</div>
             <div class="stat-label">gratuit</div>
@@ -73,113 +81,25 @@
       </div>
     </section>
 
-    <!-- ===== MAGAZINE / À LA UNE ===== -->
-    <section class="home-mag">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">À la une</h2>
-          <p class="section-subtitle">
-            Une sélection pour commencer : une ville, un récit, un itinéraire. Simple et immersif.
-          </p>
-        </div>
 
-        <div class="mag-grid">
-          <!-- Feature -->
-          <a href="kyoto.html" class="feature-card">
-            <div class="feature-media"
-              style="background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600')">
-            </div>
-
-            <div class="feature-content">
-              <div class="feature-badge">⭐ À la une</div>
-              <h3>Kyoto — l’ancienne capitale du Japon</h3>
-              <p>
-                Temples, ruelles d’antan, saisons magiques : une ville qui raconte l’histoire du Japon
-                à travers ses sanctuaires, ses jardins et ses traditions.
-              </p>
-              <div class="feature-meta">
-                <span class="pill">Histoire</span>
-                <span class="pill">Culture</span>
-                <span class="pill">3 jours</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Trends -->
-          <div class="trend-cards">
-            <a href="lisbon.html" class="trend-card">
-              <div class="trend-img" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1200')"></div>
-              <div class="trend-info">
-                <span class="trend-tag">Tendance</span>
-                <h4>Lisbonne</h4>
-                <p>Azulejos, miradouros, tramways, quartiers vivants.</p>
-              </div>
-            </a>
-
-            <a href="prague.html" class="trend-card">
-              <div class="trend-img" style="background-image:url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200')"></div>
-              <div class="trend-info">
-                <span class="trend-tag">Tendance</span>
-                <h4>Prague</h4>
-                <p>Une ville de légendes, de ponts et de clochers.</p>
-              </div>
-            </a>
-
-            <a href="marrakech.html" class="trend-card">
-              <div class="trend-img" style="background-image:url('https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200')"></div>
-              <div class="trend-info">
-                <span class="trend-tag">Tendance</span>
-                <h4>Marrakech</h4>
-                <p>Souks, palais, jardins… et l’Atlas à portée de route.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Search + filters -->
-        <div class="search-bar" aria-label="Recherche de destinations">
-          <div class="search-left">
-            <h3>Rechercher une ville</h3>
-            <p>Tu peux chercher un nom ou te laisser guider par une ambiance.</p>
-          </div>
-
-          <div class="search-right">
-            <div class="search-input">
-              <span class="search-ico">🔎</span>
-              <input id="searchCity" type="text" placeholder="Ex : Kyoto, Québec, Bangkok…" autocomplete="off" />
-            </div>
-
-            <div class="filters" aria-label="Filtres">
-              <button class="filter-chip" type="button" data-filter="histoire">Histoire</button>
-              <button class="filter-chip" type="button" data-filter="culture">Culture</button>
-              <button class="filter-chip" type="button" data-filter="nature">Nature</button>
-              <button class="filter-chip" type="button" data-filter="food">Gastronomie</button>
-              <button class="filter-chip" type="button" data-filter="architecture">Architecture</button>
-              <button class="filter-chip" type="button" data-filter="plage">Plage</button>
-            </div>
-          </div>
-        </div>
-
-        <p class="fine-print" style="margin-top:10px;">
-          Astuce : la recherche est prête — on l’activera au prochain mini-step (2 lignes de JS).
-        </p>
-      </div>
-    </section>
-
-    <!-- DESTINATIONS -->
+    <!-- ================= DESTINATIONS ================= -->
     <section id="destinations" class="destinations">
       <div class="container">
+
         <div class="section-head">
-          <h2 class="section-title">Nos Destinations</h2>
+          <h2 class="section-title">Destinations</h2>
           <p class="section-subtitle">
-            Choisis ta prochaine aventure — chaque ville a son histoire, ses incontournables et ses conseils.
+            Chaque ville est racontée comme une histoire : origine, lieux à voir et conseils pour ton voyage.
           </p>
         </div>
 
+
+        <!-- Amérique Latine -->
         <div class="continent-section">
-          <h3 class="continent-title">🌎 Amérique Latine</h3>
+          <h3 class="continent-title">Amérique Latine</h3>
           <div class="cities-grid">
-            <a href="cartagena.html" class="city-card" data-tags="histoire culture plage architecture">
+
+            <a href="cartagena.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=800')"></div>
               <div class="city-info">
                 <h4>Carthagène</h4>
@@ -188,7 +108,7 @@
               </div>
             </a>
 
-            <a href="cusco.html" class="city-card" data-tags="histoire culture nature montagne">
+            <a href="cusco.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800')"></div>
               <div class="city-info">
                 <h4>Cusco</h4>
@@ -196,13 +116,17 @@
                 <span class="city-tag">Inca • Montagne</span>
               </div>
             </a>
+
           </div>
         </div>
 
+
+        <!-- Europe -->
         <div class="continent-section">
-          <h3 class="continent-title">🌍 Europe</h3>
+          <h3 class="continent-title">Europe</h3>
           <div class="cities-grid">
-            <a href="prague.html" class="city-card" data-tags="histoire culture architecture">
+
+            <a href="prague.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=800')"></div>
               <div class="city-info">
                 <h4>Prague</h4>
@@ -211,7 +135,7 @@
               </div>
             </a>
 
-            <a href="lisbon.html" class="city-card" data-tags="histoire culture ocean architecture">
+            <a href="lisbon.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800')"></div>
               <div class="city-info">
                 <h4>Lisbonne</h4>
@@ -219,13 +143,17 @@
                 <span class="city-tag">Océan • Histoire</span>
               </div>
             </a>
+
           </div>
         </div>
 
+
+        <!-- Asie -->
         <div class="continent-section">
-          <h3 class="continent-title">🌏 Asie</h3>
+          <h3 class="continent-title">Asie</h3>
           <div class="cities-grid">
-            <a href="kyoto.html" class="city-card" data-tags="histoire culture architecture">
+
+            <a href="kyoto.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800')"></div>
               <div class="city-info">
                 <h4>Kyoto</h4>
@@ -234,7 +162,7 @@
               </div>
             </a>
 
-            <a href="bangkok.html" class="city-card" data-tags="histoire culture food">
+            <a href="bangkok.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800')"></div>
               <div class="city-info">
                 <h4>Bangkok</h4>
@@ -242,13 +170,17 @@
                 <span class="city-tag">Street Food • Temples</span>
               </div>
             </a>
+
           </div>
         </div>
 
+
+        <!-- Afrique -->
         <div class="continent-section">
-          <h3 class="continent-title">🌍 Afrique</h3>
+          <h3 class="continent-title">Afrique</h3>
           <div class="cities-grid">
-            <a href="marrakech.html" class="city-card" data-tags="histoire culture food">
+
+            <a href="marrakech.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800')"></div>
               <div class="city-info">
                 <h4>Marrakech</h4>
@@ -257,7 +189,7 @@
               </div>
             </a>
 
-            <a href="cape-town.html" class="city-card" data-tags="nature ocean culture">
+            <a href="cape-town.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800')"></div>
               <div class="city-info">
                 <h4>Le Cap</h4>
@@ -265,14 +197,18 @@
                 <span class="city-tag">Nature • Océan</span>
               </div>
             </a>
+
           </div>
         </div>
 
+
+        <!-- Amérique du Nord -->
         <div class="continent-section">
-          <h3 class="continent-title">🌎 Amérique du Nord</h3>
+          <h3 class="continent-title">Amérique du Nord</h3>
           <div class="cities-grid">
-            <a href="quebec.html" class="city-card" data-tags="histoire culture hiver">
-              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&auto=format&fit=crop')"></div>
+
+            <a href="quebec.html" class="city-card">
+              <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800')"></div>
               <div class="city-info">
                 <h4>Québec</h4>
                 <p>Canada</p>
@@ -280,55 +216,40 @@
               </div>
             </a>
 
-            <a href="san-francisco.html" class="city-card" data-tags="culture architecture tech">
+            <a href="san-francisco.html" class="city-card">
               <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800')"></div>
               <div class="city-info">
                 <h4>San Francisco</h4>
                 <p>États-Unis</p>
-                <span class="city-tag">Tech • Ponts</span>
+                <span class="city-tag">Ponts • Culture</span>
               </div>
             </a>
+
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- COLLECTIONS (vrai “site éditorial”) -->
+
+    <!-- ================= COLLECTIONS ================= -->
     <section id="collections" class="destinations">
       <div class="container">
+
         <div class="section-head">
           <h2 class="section-title">Collections</h2>
           <p class="section-subtitle">
-            Des sélections thématiques pour voyager autrement : par ambiance, par époque, par style.
+            Des idées de voyages classées par ambiance et par style.
           </p>
         </div>
 
         <div class="cities-grid">
+
           <a class="city-card" href="#destinations">
             <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200')"></div>
             <div class="city-info">
               <h4>Villes d’histoire</h4>
-              <p>Capitals, empires, récits fondateurs</p>
-              <span class="city-tag">Prague • Kyoto • Québec</span>
-            </div>
-          </a>
-
-          <a class="city-card" href="#destinations">
-            <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=1200')"></div>
-            <div class="city-info">
-              <h4>Villes fortifiées & remparts</h4>
-              <p>Balades sur les murs, ports stratégiques</p>
-              <span class="city-tag">Carthagène • Québec</span>
-            </div>
-          </a>
-
-          <a class="city-card" href="#destinations">
-            <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=1200')"></div>
-            <div class="city-info">
-              <h4>Nature + ville</h4>
-              <p>Océan, montagnes et grands points de vue</p>
-              <span class="city-tag">Le Cap • Cusco</span>
+              <p>Capitals et récits fondateurs</p>
             </div>
           </a>
 
@@ -336,98 +257,60 @@
             <div class="city-image" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1200')"></div>
             <div class="city-info">
               <h4>Food & marchés</h4>
-              <p>Street food, marchés, spécialités locales</p>
-              <span class="city-tag">Bangkok • Marrakech</span>
+              <p>Saveurs locales et street-food</p>
             </div>
           </a>
+
         </div>
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
+
+    <!-- ================= NEWSLETTER ================= -->
     <section id="contact" class="contact">
       <div class="container">
         <div class="contact-card">
+
           <div class="contact-text">
-            <h2>Newsletter Voyage ✈️</h2>
+            <h2>Newsletter Voyage</h2>
             <p>
-              Reçois des itinéraires, bons plans et idées de destinations (1 email par semaine, pas de spam).
+              Reçois chaque semaine des idées de destinations, itinéraires simples
+              et conseils pratiques pour voyager.
             </p>
-            <ul class="contact-bullets">
-              <li>✅ Itinéraires “prêts à copier”</li>
-              <li>✅ Spots incontournables + pépites</li>
-              <li>✅ Conseils budget & saisons</li>
-            </ul>
           </div>
 
           <form class="newsletter-form">
-            <label class="sr-only" for="email">Email</label>
-            <input id="email" type="email" placeholder="Ton email" required />
+            <input type="email" placeholder="Ton email" required />
             <button type="submit" class="btn btn-primary">S’inscrire</button>
-            <p class="fine-print">En t’inscrivant, tu acceptes de recevoir nos emails. Désinscription en 1 clic.</p>
           </form>
+
         </div>
       </div>
     </section>
+
   </main>
 
+
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Qisas Del Mundo — Tous droits réservés</p>
+      <p>&copy; <span id="year"></span> Qisas Del Mundo</p>
     </div>
   </footer>
 
+
+  <!-- ================= JS ================= -->
   <script>
-  // Année auto
-  document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Menu mobile (simple)
-  const btn = document.querySelector(".nav-toggle");
-  const links = document.getElementById("navLinks");
-  btn?.addEventListener("click", () => {
-    const isOpen = links.classList.toggle("open");
-    btn.setAttribute("aria-expanded", String(isOpen));
-  });
+    const btn = document.querySelector(".nav-toggle");
+    const links = document.getElementById("navLinks");
 
-  // ===== Recherche + filtres destinations =====
-  const searchInput = document.getElementById("searchCity");
-  const cards = Array.from(document.querySelectorAll(".city-card[data-tags]"));
-  const chips = Array.from(document.querySelectorAll(".filter-chip"));
-
-  let activeFilter = null;
-
-  function applyFilters(){
-    const q = (searchInput?.value || "").trim().toLowerCase();
-
-    cards.forEach(card => {
-      const name = (card.querySelector("h4")?.textContent || "").toLowerCase();
-      const country = (card.querySelector("p")?.textContent || "").toLowerCase();
-      const tags = (card.getAttribute("data-tags") || "").toLowerCase();
-
-      const matchText = !q || name.includes(q) || country.includes(q) || tags.includes(q);
-      const matchFilter = !activeFilter || tags.includes(activeFilter);
-
-      card.style.display = (matchText && matchFilter) ? "" : "none";
+    btn?.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open);
     });
-  }
+  </script>
 
-  searchInput?.addEventListener("input", applyFilters);
-
-  chips.forEach(chip => {
-    chip.addEventListener("click", () => {
-      const f = chip.getAttribute("data-filter");
-
-      // toggle
-      if(activeFilter === f){
-        activeFilter = null;
-        chips.forEach(c => c.classList.remove("active"));
-      } else {
-        activeFilter = f;
-        chips.forEach(c => c.classList.remove("active"));
-        chip.classList.add("active");
-      }
-
-      applyFilters();
-    });
-  });
-</script>
+</body>
+</html>
