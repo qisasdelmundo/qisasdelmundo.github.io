@@ -378,16 +378,60 @@
   </footer>
 
   <script>
-    // Année auto
-    document.getElementById("year").textContent = new Date().getFullYear();
+  // Année auto
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Menu mobile (simple)
-    const btn = document.querySelector(".nav-toggle");
-    const links = document.getElementById("navLinks");
-    btn?.addEventListener("click", () => {
-      const isOpen = links.classList.toggle("open");
-      btn.setAttribute("aria-expanded", String(isOpen));
+  // Menu mobile (simple)
+  const btn = document.querySelector(".nav-toggle");
+  const links = document.getElementById("navLinks");
+  btn?.addEventListener("click", () => {
+    const isOpen = links.classList.toggle("open");
+    btn.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // ===== Recherche + filtres (index) =====
+  const searchInput = document.getElementById("searchCity");
+  const cityCards = Array.from(document.querySelectorAll(".city-card"));
+  const chips = Array.from(document.querySelectorAll(".filter-chip"));
+
+  let activeFilter = null;
+
+  function applyFilters() {
+    const q = (searchInput?.value || "").trim().toLowerCase();
+
+    cityCards.forEach(card => {
+      const title = card.querySelector("h4")?.textContent?.toLowerCase() || "";
+      const country = card.querySelector(".city-info p")?.textContent?.toLowerCase() || "";
+      const tags = (card.getAttribute("data-tags") || "").toLowerCase();
+
+      const matchText = !q || title.includes(q) || country.includes(q);
+      const matchFilter = !activeFilter || tags.includes(activeFilter);
+
+      card.style.display = (matchText && matchFilter) ? "" : "none";
     });
-  </script>
-</body>
-</html>
+  }
+
+  // Recherche au clavier
+  searchInput?.addEventListener("input", applyFilters);
+
+  // Clic filtres (toggle)
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      const f = (chip.getAttribute("data-filter") || "").toLowerCase();
+
+      if (activeFilter === f) {
+        activeFilter = null;
+        chips.forEach(c => c.classList.remove("active"));
+      } else {
+        activeFilter = f;
+        chips.forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+      }
+
+      applyFilters();
+    });
+  });
+
+  // Appliquer une première fois au chargement
+  applyFilters();
+</script>
