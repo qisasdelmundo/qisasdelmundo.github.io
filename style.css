@@ -125,8 +125,6 @@ a{color:inherit;text-decoration:none}
   font-size:13px;
   box-shadow: 0 10px 24px rgba(18,18,18,0.05);
 }
-
-/* petite touche fun: un mini “sparkle” */
 .hero-badge::before{
   content:"✨";
   display:inline-block;
@@ -241,7 +239,6 @@ a{color:inherit;text-decoration:none}
   border-color: rgba(255,106,0,0.20);
 }
 
-/* Fun premium: petit liseré en haut au hover */
 .city-card::before{
   content:"";
   position:absolute; left:0; top:0; right:0; height:0;
@@ -449,7 +446,6 @@ body{
   overflow:hidden;
 }
 
-/* Petit motif discret dans chaque section (piloté par thème) */
 .city-section::after{
   content:"";
   position:absolute;
@@ -502,78 +498,67 @@ body{
 
 /* 🇨🇴 Carthagène : Caraïbes / couleurs / mer */
 body.theme-cartagena{
-  --city-accent: #00b8d9;               /* turquoise mer */
-  --city-accent-2: #ff6a00;             /* orange soleil */
+  --city-accent: #00b8d9;
+  --city-accent-2: #ff6a00;
   --city-soft: rgba(0,184,217,0.16);
 }
 
 /* 🇵🇪 Cusco : Andes / terre / or inca */
 body.theme-cusco{
-  --city-accent: #c66a2b;               /* terre cuite */
-  --city-accent-2: #f0b429;             /* or */
+  --city-accent: #c66a2b;
+  --city-accent-2: #f0b429;
   --city-soft: rgba(198,106,43,0.14);
 }
 
 /* 🇯🇵 Kyoto : Japon / rouge torii / blanc épuré */
 body.theme-kyoto{
-  --city-accent: #e11d48;               /* rouge (torii) */
-  --city-accent-2: #ff6a00;             /* accent orange du site */
+  --city-accent: #e11d48;
+  --city-accent-2: #ff6a00;
   --city-soft: rgba(225,29,72,0.12);
 }
 
 /* 🇲🇦 Marrakech : ocre / zellige / bleu majorelle */
 body.theme-marrakech{
-  --city-accent: #d97706;               /* ocre */
-  --city-accent-2: #2563eb;             /* bleu majorelle */
+  --city-accent: #d97706;
+  --city-accent-2: #2563eb;
   --city-soft: rgba(217,119,6,0.14);
 }
 
 /* 🇨🇿 Prague : bordeaux / doré / vibe ancienne */
 body.theme-prague{
-  --city-accent: #7f1d1d;               /* bordeaux */
-  --city-accent-2: #f59e0b;             /* doré */
+  --city-accent: #7f1d1d;
+  --city-accent-2: #f59e0b;
   --city-soft: rgba(127,29,29,0.12);
 }
 
 /* 🇵🇹 Lisbonne : azulejos / bleu / soleil */
 body.theme-lisbon{
-  --city-accent: #2563eb;               /* bleu azulejos */
-  --city-accent-2: #ff6a00;             /* orange soleil */
+  --city-accent: #2563eb;
+  --city-accent-2: #ff6a00;
   --city-soft: rgba(37,99,235,0.12);
 }
 
 /* 🇹🇭 Bangkok : or / nuit / néons soft */
 body.theme-bangkok{
-  --city-accent: #f59e0b;               /* or */
-  --city-accent-2: #a855f7;             /* violet néon */
+  --city-accent: #f59e0b;
+  --city-accent-2: #a855f7;
   --city-soft: rgba(245,158,11,0.12);
 }
 
 /* 🇺🇸 San Francisco : bleu tech / brume / orange bridge */
 body.theme-sanfrancisco{
-  --city-accent: #0ea5e9;               /* bleu */
-  --city-accent-2: #ff6a00;             /* orange pont */
+  --city-accent: #0ea5e9;
+  --city-accent-2: #ff6a00;
   --city-soft: rgba(14,165,233,0.12);
 }
 
 /* 🇨🇦 Québec : hiver / bleu froid / blanc */
 body.theme-quebec{
-  --city-accent: #1d4ed8;               /* bleu froid */
-  --city-accent-2: #60a5fa;             /* bleu clair */
+  --city-accent: #1d4ed8;
+  --city-accent-2: #60a5fa;
   --city-soft: rgba(29,78,216,0.10);
-  
 }
 
-/* 🇿🇦 Le Cap : océan / nature / vert */
-body.theme-capetown{
-  --city-accent: #0ea5e9;               /* océan */
-  --city-accent-2: #22c55e;             /* nature */
-  --city-soft: rgba(34,197,94,0.12);
-}
-
-.city-quebec{
-  background-image: url('https://images.unsplash.com/photo-1608019342976-e58b6e7b0b3e?w=1600&auto=format&fit=crop');
-}
 /* Spécifique Québec : voile moins opaque pour voir la photo */
 body.theme-quebec .city-header::before{
   background:
@@ -582,4 +567,11 @@ body.theme-quebec .city-header::before{
       rgba(255,246,237,0.65) 0%,
       rgba(255,246,237,0.35) 45%,
       rgba(255,246,237,0.08) 100%);
+}
+
+/* 🇿🇦 Le Cap : océan / nature / vert */
+body.theme-capetown{
+  --city-accent: #0ea5e9;
+  --city-accent-2: #22c55e;
+  --city-soft: rgba(34,197,94,0.12);
 }
