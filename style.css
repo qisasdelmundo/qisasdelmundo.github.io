@@ -538,6 +538,23 @@ body.theme-lisbon{
   --city-soft: rgba(37,99,235,0.12);
 }
 
+/* 🇲🇽 Guanajuato : couleurs + colonial + soleil */
+body.theme-guanajuato{
+  --city-accent: #f97316;          /* orange chaud */
+  --city-accent-2: #e11d48;        /* rose/rouge */
+  --city-soft: rgba(249,115,22,0.12);
+}
+
+/* Optionnel : voile un peu moins opaque pour bien voir la photo */
+body.theme-guanajuato .city-header::before{
+  background:
+    radial-gradient(800px 420px at 80% 20%, rgba(249,115,22,0.18), transparent 60%),
+    linear-gradient(90deg,
+      rgba(255,246,237,0.70) 0%,
+      rgba(255,246,237,0.40) 45%,
+      rgba(255,246,237,0.10) 100%);
+}
+
 /* 🇹🇭 Bangkok : or / nuit / néons soft */
 body.theme-bangkok{
   --city-accent: #f59e0b;
